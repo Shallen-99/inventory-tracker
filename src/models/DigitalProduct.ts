@@ -1,20 +1,20 @@
 import { Product } from "./Product";
 
 export class DigitalProduct extends Product {
-constructor(
-sku: string,
-name: string,
-price: number,
-public fileSize: number
-) {
-super(sku, name, price);
-}
+    constructor(
+        sku: string,
+        name: string,
+        price: number,
+        public fileSize: number
+    ) {
+        super(sku, name, price);
+    }
 
-getPriceWithTax(): number {
-return this.price;
-}
+    getPriceWithTax(): number {
+        return this.price;
+    }
 
-get formattedFileSize(): string {
-return `${this.fileSize} MB`;
-}
+    get formattedFileSize(): string {
+        return `${this.fileSize} MB`;
+    }
 }
